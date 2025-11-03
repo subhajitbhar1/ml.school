@@ -12,6 +12,11 @@
     "notebook.defaultFormatter": "charliermarsh.ruff",
     "editor.defaultFormatter": "charliermarsh.ruff",
     "[python]": {
-        "editor.defaultFormatter": "charliermarsh.ruff"
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "remote.extensionKind": {
+            "tideily.mlschool": [
+                "workspace"
+            ]
+        }
     }
 }
