@@ -8,10 +8,9 @@ RUN echo "Acquire::http::Pipeline-Depth 0;" > /etc/apt/apt.conf.d/99custom && \
     echo "Acquire::BrokenProxy    true;" >> /etc/apt/apt.conf.d/99custom
 
 RUN apt update
-
 # Install a native toolchain and common build dependencies
 RUN export DEBIAN_FRONTEND=noninteractive && \
-    apt-get update && apt-get upgrade -y && \
+    apt-get update && apt-get upgrade -y --fix-missing && \
     apt-get install -y --no-install-recommends \
         build-essential \
         pkg-config \
